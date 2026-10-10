@@ -24,6 +24,10 @@ Use it for a two-minute family challenge, a classroom discussion or the opening 
 
 > **Beat the AI. Then teach your family the trick.**
 
+## Built for DevDay 2026 with OpenAI Decisions
+
+OpenAI released the Decisions API in public beta on **October 6, 2026**. [Official release notes](https://developers.openai.com/api/docs/changelog). ScamSense turns that new capability into a playable human-versus-AI learning experience.
+
 ## Real OpenAI Decisions integration
 
 Your AI opponent uses the **[OpenAI Decisions API](https://developers.openai.com/api/docs/guides/decisions)** with `gpt-6-luna`. After you lock in an answer, the server sends the same SMS, sender and visible context to `POST /v1/decisions`.
@@ -40,6 +44,8 @@ This is a standalone web app using OpenAI’s API, not a ChatGPT plugin. Automat
 
 ## Designed for the player
 
+- A familiar SMS conversation: sender header, timestamp, incoming bubble and your clearly labeled game verdict.
+- Request-driven animation shows your answer being locked, the actual API request pending, and its successful or unavailable result. No artificial waiting time or invented processing stages; reduced-motion preferences are respected.
 - Large SMS text: 20px on small phones, 22px on desktop.
 - Clear 18–19px answer labels, larger touch targets and stronger contrast.
 - A visible you-versus-AI scoreboard on desktop and case-by-case comparisons on every screen size.

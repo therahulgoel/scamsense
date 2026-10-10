@@ -87,3 +87,9 @@ User selected Vercel for both frontend and real backend. Source can live on GitH
 Pitch: “Beat the AI. Then teach your family the trick.” The production AI predictions come from real OpenAI requests; the SMS and reviewed training content are fictional. Never claim that the game uses real victim messages or no fictional data. It is not a ChatGPT integration.
 
 The supplied event criteria are usefulness, technical execution, originality and how well the solution works. The strongest assets are the working public demo, independent grading and live human-versus-AI mechanic. Originality and unmeasured learning benefit remain limitations. A polished demo can compete, but no outcome or virality is guaranteed. See HACKATHON.md for the detailed assessment and pitch.
+
+## SMS and live API presentation
+
+The game uses a simulated messaging thread, with sender identity caution, incoming SMS bubble and a separate game-verdict bubble labeled “not a reply.” Messages animate into place. The Decisions panel changes from your move to requesting and then response received or unavailable, driven by actual request state. There are no staged delays or invented AI progress metrics. All animations honor reduced-motion preferences.
+
+A prominent “Built for DevDay 2026” strip highlights OpenAI’s new Decisions API and links to the official October 6, 2026 beta release notes. This describes the project’s event context, not an endorsement.

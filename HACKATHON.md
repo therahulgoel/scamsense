@@ -30,6 +30,10 @@ The new design improves readability and makes the actual AI interaction visible.
 
 The technical demonstration uses the Decisions API’s `choice` and `predicate` questions, powered by `gpt-6-luna`. It does not use `score`, Agents, Dots or a ChatGPT sidebar plugin. Codex was used to build and refine the app. Do not claim launch features that are not in the project.
 
+## The DevDay connection
+
+OpenAI released Decisions in beta on October 6, 2026 ([official changelog](https://developers.openai.com/api/docs/changelog)). ScamSense uses it to turn message evidence into a typed verdict and tactic estimates during live play. Show the request-driven animation and response receipt; explain the practical benefit rather than just listing API names.
+
 ## A 90-second demonstration
 
 1. **0–15 seconds:** Show the public page. “Five texts. You versus AI. No signup.”
