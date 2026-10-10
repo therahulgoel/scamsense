@@ -2,6 +2,12 @@
 
 [Play](https://scamsense-lemon.vercel.app/) · [Source](https://github.com/therahulgoel/scamsense) · [Built by @therahulgoel](https://x.com/therahulgoel)
 
+[Public problem and usage page](https://scamsense-lemon.vercel.app/about) · [Code evidence and verification guide](REVIEW_GUIDE.md)
+
+## The problem in one sentence
+
+People need practice deciding whether to trust, verify or reject a message; ScamSense makes that practice a short game with immediate, specific feedback.
+
 ## The 30-second pitch
 
 “Think you’re unscammable? Prove it in five texts. ScamSense puts your judgment up against OpenAI’s live Decisions API. You both get the same message and context, and an authored answer key grades you independently. After each choice, you learn the trick and a safer next step. Then challenge your family group to the same cases. Beat the AI. Pass on the instinct.”

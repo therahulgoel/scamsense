@@ -2,7 +2,7 @@ import './globals.css';
 export const metadata = {
   metadataBase: new URL('https://scamsense-lemon.vercel.app'),
   title: 'ScamSense — Think you’re unscammable?',
-  description: 'Five texts. Two minutes. You versus the real OpenAI Decisions API. Learn the scam, challenge a friend. Built by @therahulgoel.',
+  description: 'Practise spotting SMS scams with five fictional Indian messages. Compare your judgment with the live OpenAI Decisions API, learn the clues and choose safer actions.',
   openGraph: {
     title: 'Think you’re unscammable? Take on the AI.',
     description: 'Five fictional SMS. Real OpenAI decisions. Play ScamSense and challenge your family group.',

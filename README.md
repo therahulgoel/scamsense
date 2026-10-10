@@ -1,8 +1,12 @@
 # ScamSense — Think you’re unscammable?
 
-**Five texts. Two minutes. You versus AI.**
+**Practise spotting SMS scams before a real message puts you under pressure.**
+
+ScamSense is a browser-based learning game for Indian SMS contexts. In a five-case round, players judge fictional messages, compete with OpenAI’s live Decisions API, and learn a concrete clue and safer action after each answer.
 
 That urgent bank alert. The parcel you almost expected. A job offer that sounds a little too good. ScamSense turns these moments into a quick game: make your call, see what the AI chose, learn the clue, then challenge a friend.
+
+**Explore:** [Problem and usage](https://scamsense-lemon.vercel.app/about) · [Implementation and verification guide](REVIEW_GUIDE.md) · [Demo pitch](HACKATHON.md)
 
 ## Play now
 
@@ -42,6 +46,12 @@ Your AI opponent uses the **[OpenAI Decisions API](https://developers.openai.com
 
 This is a standalone web app using OpenAI’s API, not a ChatGPT plugin. Automated tests use injected test responses to check failure handling without spending API credits; those fixtures are not used by the game.
 
+## Why Decisions belongs in this game
+
+The authored quiz and lessons work without AI. The Decisions API adds an independent opponent: players commit first, then examine where their judgment agrees or disagrees with the model. Its `choice` output maps directly to the three game verdicts; `predicate` outputs drive the tactic display. This is a concrete use of structured decisions, not evidence that this API outperforms alternatives. No accuracy, latency or cost benchmark against another API has been run.
+
+For a traceable walkthrough of requests, grading and failure behavior, see [REVIEW_GUIDE.md](REVIEW_GUIDE.md).
+
 ## Designed for the player
 
 - A familiar SMS conversation: sender header, timestamp, incoming bubble and your clearly labeled game verdict.
@@ -77,7 +87,7 @@ Open http://127.0.0.1:3000. Set `OPENAI_API_KEY` in `.env.local` to enable live 
 2. In Vercel, choose **Add New → Project**, import that repository, and keep the detected **Next.js** framework settings. For this repository, keep Root Directory at the repository root, where `package.json` lives.
 3. Under **Environment Variables** on the import screen, add Name `OPENAI_API_KEY` and your private key as Value, then click **Add**. For an existing project, use **Settings → Environment Variables** and select Production (and Preview if needed). Never prefix the name with `NEXT_PUBLIC_`. Obtain an OpenAI Platform project key at https://platform.openai.com/api-keys with billing/credits and access to `POST /v1/decisions` using `gpt-6-luna`.
 4. Deploy. Open the returned `.vercel.app` URL and play a round. If adding the key after deployment, redeploy to apply it.
-5. Verify the reveal says **Live Decisions AI** before claiming the AI comparison is live.
+5. Verify the reveal says **LIVE RESPONSE** before claiming the AI comparison is live.
 
 Pushes to the connected `main` branch deploy automatically. Environment variable changes require a new deployment; use **Deployments → latest deployment → ⋯ → Redeploy**. Check the production URL in a signed-out browser before sharing it with judges.
 

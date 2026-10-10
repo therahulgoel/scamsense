@@ -114,7 +114,7 @@ export default function Game() {
  <div className="hero-copy">
  <span className="eyebrow"><span className="live-dot"/> THE TWO-MINUTE SCAM SHOWDOWN</span>
  <h1>Think you’re<br/><span className="purple-word">unscammable?</span></h1>
- <p className="hero-sub">Five texts. You versus AI.<br/>Spot the trap before it spots you.</p>
+ <p className="hero-sub">Practise spotting SMS scams in five texts.<br/>Make your call. Compare with live AI.</p>
  <div className="hero-pills"><span>5 cases</span><span>2 minutes</span><span>No signup</span></div>
  {friend&&<div className="friend-callout"><span aria-hidden="true">🎯</span><div><strong>Your friend scored {friend.score}/5. Your move.</strong><small>Same cases. Shared scores are self-reported.</small></div></div>}
  <button className="primary hero-cta" onClick={()=>start()} disabled={busy}>{busy?'Opening your case file…':friend?'Accept the challenge':'Take on the AI'}<Arrow/></button>
@@ -134,6 +134,7 @@ export default function Game() {
  <div className="integration-steps"><div><span>01</span><div><h3>You make the call</h3><p>Read the SMS and its context. Trust, verify, or spot the scam.</p></div></div><div><span>02</span><div><h3>Decisions makes its call</h3><p>A live request chooses a verdict and estimates the scam tactics present.</p></div></div><div><span>03</span><div><h3>Both face the answer key</h3><p>Authored training labels score you both fairly. The AI can be wrong, too.</p></div></div></div>
  <div className="honesty-note"><strong>Real predictions. Fictional situations.</strong><span>15 authored training cases. No canned AI verdicts. If the API is unavailable, we say so.</span></div>
  </section>
+ <section className="purpose-summary" aria-labelledby="purpose-title"><div><span className="eyebrow">PRACTICE FOR REAL-LIFE MESSAGES</span><h2 id="purpose-title">Learn when to trust. When to check. When to stop.</h2><p>An urgent KYC alert. A parcel update. A payment request. Practise with fictional Indian SMS scenarios, learn the evidence behind each answer, and take a safer habit into your next real conversation.</p></div><a href="/about">Why ScamSense? Problem, usage &amp; how it works →</a></section>
  <section className="family-pitch"><span aria-hidden="true">↗</span><div><h2>Win the round. Pass on the instinct.</h2><p>Challenge the family group. Start a conversation before the next suspicious message arrives.</p></div><button className="secondary" onClick={()=>start()} disabled={busy}>Play, then challenge a friend →</button></section>
  </section>}
  {game&&(screen==='play'||screen==='reveal')&&<section className="play-layout" key={`${current.id}-${screen}`}>
@@ -152,7 +153,7 @@ export default function Game() {
  {error&&<div className="error-banner" role="alert"><span>{error}</span>{screen!=='home'&&<button disabled={busy} onClick={()=>start()}>Start a fresh round</button>}</div>}
  {notice&&<div className="toast" role="status">✓ {notice}</div>}
  </main>
- <footer className="footer"><span>Built by <a href="https://x.com/therahulgoel" target="_blank" rel="noopener noreferrer"><strong>@therahulgoel</strong></a></span><a className="creator-follow" href="https://x.com/therahulgoel" target="_blank" rel="noopener noreferrer">Follow on X ↗</a><span>Fictional SMS. Reviewed lessons. Sharper instincts.</span><a href="https://developers.openai.com/api/docs/guides/decisions" target="_blank" rel="noreferrer">Built with Codex · OpenAI Decisions API ↗</a></footer>
+ <footer className="footer"><span>Built by <a href="https://x.com/therahulgoel" target="_blank" rel="noopener noreferrer"><strong>@therahulgoel</strong></a></span><a className="creator-follow" href="https://x.com/therahulgoel" target="_blank" rel="noopener noreferrer">Follow on X ↗</a><a href="/about">Why ScamSense? How it works →</a><a href="https://developers.openai.com/api/docs/guides/decisions" target="_blank" rel="noreferrer">Built with Codex · OpenAI Decisions API ↗</a></footer>
  <dialog ref={modalRef} className="how-modal" onCancel={()=>setAbout(false)} onClose={()=>{setAbout(false);aboutTriggerRef.current?.focus();}}><button className="modal-close" onClick={()=>setAbout(false)} aria-label="Close how to play">×</button><span className="eyebrow">WELCOME, DETECTIVE</span><h2>Spot the trap.<br/>Learn the clue.</h2><ol><li>Read the SMS and the visible context.</li><li>Choose likely legitimate, suspicious, or clear scam.</li><li>Compare your verdict with AI and the reviewed answer.</li><li>Practice a missed tactic and challenge a friend.</li></ol><p>100 XP per correct answer. From your third consecutive correct answer, earn 25 bonus XP per catch. An incorrect answer resets the streak.</p><p>AI sees the same evidence as you. It never determines the answer key. Unavailable AI responses are excluded from AI accuracy.</p><button className="primary" onClick={()=>setAbout(false)}>Got it. Let’s play.<span>→</span></button></dialog>
  </div>;
 }

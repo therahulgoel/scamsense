@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 export const runtime = 'nodejs';
 export const maxDuration = 20;
 const pending = new Map();
+// The authored label is the scoring authority; a live AI prediction is a competitor.
 async function grade(session, verdict) {
  const scenario = getScenario(session.ids[session.answers.length]);
  const ai = await evaluate(scenario);

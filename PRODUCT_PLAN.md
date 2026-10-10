@@ -101,3 +101,7 @@ Reveal order: clear scenario verdict → player and OpenAI Decisions comparison 
 ### Responsive game workspace
 
 Desktop places the message and context beside the answer choices. Phones stack those sections with large touch targets and a compact score bar. Reveals pair the result and live Decisions comparison with the lesson on desktop, then follow a single reading order on mobile. The event banner stays on the landing page so gameplay has more reading space. An unfinished round can be resumed from home after a reload.
+
+### Public explanation and reviewability
+
+The landing page explains the training purpose and links to `/about`, a static public page covering the problem, intended users, play flow, Decisions integration and limitations. `REVIEW_GUIDE.md` maps claims to code and gives reproduction steps. README links both entry points. These describe shipped behavior and intended impact without claiming measured learning gains or API superiority.
