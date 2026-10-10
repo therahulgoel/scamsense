@@ -7,3 +7,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## ScamSense project context
+
+- Public demo: https://scamsense-lemon.vercel.app/
+- Source repository: https://github.com/therahulgoel/scamsense
+- Next.js frontend and Node.js route handlers deploy together on Vercel.
+- Preserve creator credit: Built by @therahulgoel.
+- README.md documents setup, operations, validation and limitations; PRODUCT_PLAN.md records the product and shipped scope. Keep both consistent when behavior changes.
+- Keep credentials server-side. Never read or print `.env.local` when updating docs; never commit secrets or add a `NEXT_PUBLIC_` API key.
+- Grade from reviewed scenario labels. AI receives only player-visible evidence; unavailable AI must remain visibly unavailable and excluded from accuracy.
+- Run `npm test` and `npm run build` for application changes. Documentation-only edits need link and consistency review, not additional paid API calls.
