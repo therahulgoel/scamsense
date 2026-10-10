@@ -24,7 +24,7 @@ Use it for a two-minute family challenge, a classroom discussion or the opening 
 
 > **Beat the AI. Then teach your family the trick.**
 
-## Built for DevDay 2026 with OpenAI Decisions
+## Built for DevDay Community Event Bengaluru 2026 with OpenAI Decisions
 
 OpenAI released the Decisions API in public beta on **October 6, 2026**. [Official release notes](https://developers.openai.com/api/docs/changelog). ScamSense turns that new capability into a playable human-versus-AI learning experience.
 

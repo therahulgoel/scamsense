@@ -92,4 +92,4 @@ The supplied event criteria are usefulness, technical execution, originality and
 
 The game uses a simulated messaging thread, with sender identity caution, incoming SMS bubble and a separate game-verdict bubble labeled “not a reply.” Messages animate into place. The Decisions panel changes from your move to requesting and then response received or unavailable, driven by actual request state. There are no staged delays or invented AI progress metrics. All animations honor reduced-motion preferences.
 
-A prominent “Built for DevDay 2026” strip highlights OpenAI’s new Decisions API and links to the official October 6, 2026 beta release notes. This describes the project’s event context, not an endorsement.
+A prominent “Built for DevDay Community Event Bengaluru 2026” strip highlights OpenAI’s new Decisions API and links to the official October 6, 2026 beta release notes. This describes the project’s event context, not an endorsement.

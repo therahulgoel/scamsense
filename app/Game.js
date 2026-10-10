@@ -83,7 +83,7 @@ export default function Game() {
  const battle=fullAI?(score.correct>score.aiCorrect?'You beat the AI.':score.correct===score.aiCorrect?'You and AI tied.':'AI takes this round.'):'Your instincts, sharpened.';
  return <div className="app">
  <div className="background-orb orb-one" aria-hidden="true"/><div className="background-orb orb-two" aria-hidden="true"/>
- <div className="launch-strip"><span className="launch-pill">BUILT FOR DEVDAY 2026</span><span>Play against OpenAI’s new <strong>Decisions API</strong></span><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noreferrer">Beta released Oct 6 ↗</a></div>
+ <div className="launch-strip"><span className="launch-pill">BUILT FOR DEVDAY COMMUNITY EVENT BENGALURU 2026</span><span>Play against OpenAI’s new <strong>Decisions API</strong></span><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noreferrer">Beta released Oct 6 ↗</a></div>
  <header className="topbar"><button className="wordmark" onClick={home} disabled={busy} aria-label="ScamSense home"><span className="logo">s<span>✦</span></span>scamsense<span className="brand-dot">.</span></button><nav aria-label="Main navigation"><span className="built-badge">Five texts. One scam showdown.</span><button ref={aboutTriggerRef} className="about-button" onClick={()=>setAbout(true)}>How to play <span aria-hidden="true">?</span></button></nav></header>
  <main>
  {screen==='home'&&<section className="home-layout">
