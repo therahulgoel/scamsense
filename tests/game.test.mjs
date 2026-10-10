@@ -37,7 +37,7 @@ test('Refusal, malformed and unavailable responses never invent AI answers',asyn
 });
 test('Live request uses the private key, fixed endpoint and visible evidence',async()=>{
  const ai=await evaluate(scenarios[0],{apiKey:'test-key',fetcher:async(url,options)=>{assert.equal(url,'https://api.openai.com/v1/decisions');assert.equal(options.headers.Authorization,'Bearer test-key');assert.equal(JSON.parse(options.body).model,'gpt-6-luna');return {ok:true,json:async()=>({answers:[{type:'choice',name:'verdict',choice:'scam'}]})};}});
- assert.equal(ai.status,'live');assert.equal(ai.verdict,'scam');
+ assert.equal(ai.status,'live');assert.equal(ai.verdict,'scam');assert.ok(Number.isFinite(ai.elapsedMs)&&ai.elapsedMs>=0);
 });
 test('HTTP errors and connection failures preserve training mode',async()=>{
  for(const fetcher of [async()=>({ok:false,status:429}),async()=>{throw new Error('network');}])assert.equal((await evaluate(scenarios[0],{apiKey:'test-key',fetcher})).status,'unavailable');

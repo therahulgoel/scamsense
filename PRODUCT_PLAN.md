@@ -1,6 +1,6 @@
-# ScamSense — Can you outsmart a scammer?
+# ScamSense — Think you’re unscammable?
 
-Built by @therahulgoel
+Built by [@therahulgoel](https://x.com/therahulgoel)
 
 Status: implemented and publicly deployed. Local tests, production build and backend flow checks passed. One live production Decisions comparison was verified on 10 October 2026.
 
@@ -23,7 +23,7 @@ Start with Indian students and working professionals who receive bank, parcel, j
 6. Sharing: same challenge ID, same order, no answer spoilers. Provide share text and a copy-link fallback. Friends see their own results after playing. No forced signup or contact access.
 
 ## Visual and accessibility direction
-Mobile first; compact phone-style composition; warm off-white canvas, vivid lavender, golden accents, mint success states, and a friendly detective mascot. Rounded case cards, crisp typography, tactile buttons, and a trophy-style result. Include “Built by @therahulgoel” in the footer, result/share card, and README. One primary action per screen. Use large readable message text and touch targets of at least 44px. Keyboard operation, visible focus, reduced-motion support. Communicate results through words and icons as well as color. No countdown pressure; optional playful motion must not slow the reveal.
+Mobile first; generous reading space; warm off-white canvas, vivid violet, golden accents, mint success states, and a friendly detective mascot. The redesigned landing leads with “Think you’re unscammable?” and a human-versus-AI matchup. SMS text is 20px on small phones and 22px on desktop; choice labels are 18–19px. Rounded case cards, crisp typography, tactile buttons, and a trophy-style result. Include “Built by @therahulgoel” in the footer, result/share card, and README. Link the footer and results to the creator’s X profile. One primary action per screen. Use large readable message text and touch targets of at least 44px. Keyboard operation, visible focus, reduced-motion support. Communicate results through words and icons as well as color. No countdown pressure; optional playful motion must not slow the reveal.
 
 ## Content and scoring
 Prepare 15 manually reviewed scenarios: three each for KYC, UPI, parcels, jobs, and electricity bills. Include clear scams, plausible legitimate messages with enough visible context, and examples where independent verification is the defensible answer. Difficulty reflects subtlety, not message length or bad spelling.
@@ -33,12 +33,12 @@ Each record contains ID, version, text, sender, display context, category, diffi
 Award 100 XP per correct verdict and 25 bonus XP for each correct answer from the third consecutive correct answer onward; a miss resets the streak. Show verdict accuracy separately for fair AI comparison. Optional clue selection can provide bonus points and better adaptation if time permits; it is not required for the first build. Reviewed scenario data controls scoring. AI receives only the same visible message/context as the player, never answer keys or hidden tactic tags.
 
 ## AI implementation
-Server-side Decisions request: choice for verdict, predicates for tactic presence, no runtime `score` question is used in the shipped MVP. Use reviewed explanations for educational feedback. Validate returned answers. A refusal, timeout, or error means AI unavailable for that round and is excluded from AI accuracy, not counted as wrong. If using a cached answer, label it as a previous AI prediction. Never invent an answer to preserve a scoreboard.
+Server-side Decisions request: choice for verdict, predicates for tactic presence, the shipped MVP uses no `score` question. Use reviewed explanations for educational feedback. Validate returned answers. A refusal, timeout, or error means AI unavailable for that round and is excluded from AI accuracy, not counted as wrong. Successful reveals include an expandable API receipt with model, endpoint, elapsed time and real tactic probabilities. Explain that reopening a stored receipt does not run a new request. Never invent an answer to preserve a scoreboard.
 
 For the hackathon, use reviewed static content; live content generation is a later experiment requiring validation. Keep the API key in server environment variables. Add request limits and a bounded set of accepted scenario IDs. The backend looks up evidence from a scenario ID; do not expose an unrestricted public API proxy. Keep answer keys server-side and return them only after a guess.
 
 ## Share and return loop
-Proposed share text: “I spotted 4 of 5 SMS traps. Can you beat me? Try the same ScamSense challenge.” Use genuine results. Launch with a fixed challenge to simplify comparisons. Later offer a reviewed daily challenge and optional Hindi/Hinglish content. Measure completed rounds, share clicks, incoming challenge visits, and repeat play; do not promise virality or collect message content for analytics.
+Share text uses the real player score and includes the AI score only when all five AI answers were available: “I scored 4/5 on ScamSense. AI got 4/5. Five texts. One scam showdown. Can you beat me?” Use genuine results. Launch with a fixed challenge to simplify comparisons. Later offer a reviewed daily challenge and optional Hindi/Hinglish content. Measure completed rounds, share clicks, incoming challenge visits, and repeat play; do not promise virality or collect message content for analytics.
 
 ## Original three-hour implementation budget
 - 0–25 min: establish API access, confirm hosting path, define data contract, review initial scenarios.
@@ -81,3 +81,9 @@ Delivery package: public playable URL, GitHub source link, README setup and arch
 
 ## Hosting decision
 User selected Vercel for both frontend and real backend. Source can live on GitHub. OPENAI_API_KEY is a server environment variable, never a browser credential. No paid database or custom domain is needed for the MVP. OpenAI usage is billed separately. The README contains deployment steps and honest API failure behavior.
+
+## Honest positioning and evaluation
+
+Pitch: “Beat the AI. Then teach your family the trick.” The production AI predictions come from real OpenAI requests; the SMS and reviewed training content are fictional. Never claim that the game uses real victim messages or no fictional data. It is not a ChatGPT integration.
+
+The supplied event criteria are usefulness, technical execution, originality and how well the solution works. The strongest assets are the working public demo, independent grading and live human-versus-AI mechanic. Originality and unmeasured learning benefit remain limitations. A polished demo can compete, but no outcome or virality is guaranteed. See HACKATHON.md for the detailed assessment and pitch.
