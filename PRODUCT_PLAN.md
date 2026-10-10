@@ -93,3 +93,7 @@ The supplied event criteria are usefulness, technical execution, originality and
 The game uses a simulated messaging thread, with sender identity caution, incoming SMS bubble and a separate game-verdict bubble labeled “not a reply.” Messages animate into place. The Decisions panel changes from your move to requesting and then response received or unavailable, driven by actual request state. There are no staged delays or invented AI progress metrics. All animations honor reduced-motion preferences.
 
 A prominent “Built for DevDay Community Event Bengaluru 2026” strip highlights OpenAI’s new Decisions API and links to the official October 6, 2026 beta release notes. This describes the project’s event context, not an endorsement.
+
+## Learning-focused reveal
+
+Reveal order: clear scenario verdict → player and OpenAI Decisions comparison → exact evidence and authored explanation → safer action and memorable habit → Next case → optional real API response. The original SMS and context can be reopened on demand. Feedback distinguishes both correct, player-only correct, AI-only correct, both wrong and unavailable AI. The API receives no training label; its tactic estimates remain distinct from authored explanations. The play prompt is “Would you trust this message?” with “Before you decide” context.

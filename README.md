@@ -49,7 +49,9 @@ This is a standalone web app using OpenAI’s API, not a ChatGPT plugin. Automat
 - Large SMS text: 20px on small phones, 22px on desktop.
 - Clear 18–19px answer labels, larger touch targets and stronger contrast.
 - A visible you-versus-AI scoreboard on desktop and case-by-case comparisons on every screen size.
-- Streak XP, constructive feedback and a concrete safer next action.
+- Result-first feedback: a clear verdict, your answer versus OpenAI Decisions, the exact clue, and a safer next action.
+- A short habit to remember after each case, with the original SMS and technical API details available on demand.
+- Streak XP and constructive feedback for both correct and missed answers.
 - A shareable challenge, downloadable score card and social link preview.
 - Keyboard focus, reduced-motion support, and readable mobile layouts.
 
@@ -151,7 +153,7 @@ Tests cover visible-evidence separation, scenario integrity, signed-token tamper
 
 1. Open [the public game](https://scamsense-lemon.vercel.app/), choose First instincts, and select **Take on the AI**.
 2. Explain that the SMS and its visible context are the full evidence for both contestants.
-3. Answer the KYC case, compare the two verdicts, and expand **See the live Decisions receipt** to show the real model response, latency and tactic estimates.
+3. Answer the KYC case, compare the two verdicts, and expand **Explore the real Decisions response** to show the real model response, latency and tactic estimates.
 4. Show a plausible ambiguous case: the correct skill is to verify, not distrust everything.
 5. Finish a round, show the player/AI score, then open a targeted practice case.
 6. Share the same challenge with a friend. Explain the Decisions `choice` and `predicate` questions and independent grading.
