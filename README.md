@@ -46,14 +46,14 @@ This is a standalone web app using OpenAI’s API, not a ChatGPT plugin. Automat
 
 - A familiar SMS conversation: sender header, timestamp, incoming bubble and your clearly labeled game verdict.
 - Request-driven animation shows your answer being locked, the actual API request pending, and its successful or unavailable result. No artificial waiting time or invented processing stages; reduced-motion preferences are respected.
-- Large SMS text: 20px on small phones, 22px on desktop.
+- Large SMS text: 20px on small phones, 21px in the desktop game.
 - Clear 18–19px answer labels, larger touch targets and stronger contrast.
-- A visible you-versus-AI scoreboard on desktop and case-by-case comparisons on every screen size.
+- A compact you-versus-AI scoreboard on every screen size. Desktop places the SMS and choices side by side; phones use a readable single column.
 - Result-first feedback: a clear verdict, your answer versus OpenAI Decisions, the exact clue, and a safer next action.
 - A short habit to remember after each case, with the original SMS and technical API details available on demand.
 - Streak XP and constructive feedback for both correct and missed answers.
 - A shareable challenge, downloadable score card and social link preview.
-- Keyboard focus, reduced-motion support, and readable mobile layouts.
+- Keyboard focus, a skip-to-content link, reduced-motion support, and readable mobile layouts. Resume an unfinished round from the home screen, including after a reload.
 
 ## Deployment and verification
 
